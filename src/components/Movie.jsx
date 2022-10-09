@@ -14,11 +14,9 @@ const Movie = ({ item }) => {
           {item?.title}
         </p>
         <p>
-          {like ? (
-            <FaHeart className="absolute top-4 left-4 text-gray-400" />
-          ) : (
+          
             <FaRegHeart className="absolute top-4 left-4 text-gray-400" />
-          )}
+        
         </p>
       </div>
     </div>
