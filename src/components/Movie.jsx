@@ -1,6 +1,5 @@
 import React from "react";
 import { FaRegHeart } from "react-icons/fa";
-import MoviePage from "../pages/MoviePage";
 import { Link } from "react-router-dom";
 
 
