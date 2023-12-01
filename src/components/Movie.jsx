@@ -1,9 +1,18 @@
 import React from "react";
-import {  FaRegHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
+import MoviePage from "../pages/MoviePage";
+import { Link } from "react-router-dom";
+
 
 const Movie = ({ item }) => {
+  const linkTo = {
+    pathname: "/moviePage/" + item?.id,
+  };
   return (
-    <div className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2">
+    <>
+    
+      <div className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2">
+      <Link to={linkTo}>
       <img
         className="w-full h-auto block"
         src={`https://image.tmdb.org/t/p/w500/${item?.backdrop_path}`}
@@ -18,8 +27,10 @@ const Movie = ({ item }) => {
             <FaRegHeart className="absolute top-4 left-4 text-gray-400" />
         
         </p>
+          </div>
+          </Link>
       </div>
-    </div>
+      </>
   );
 };
 
